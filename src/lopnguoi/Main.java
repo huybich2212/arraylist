@@ -22,9 +22,9 @@ public class Main {
         hoGiaDinh2.display();
         hoGiaDinh2.delete("linh");
         hoGiaDinh2.display();
-        hoGiaDinh1.edit("mạnh","sơn");
+
         System.out.println("-----tim--------");
-        int i = hoGiaDinh2.timkiem("vinh");
+        int i = hoGiaDinh2.timKiem("vinh");
         if (i == -1) {
             System.out.println("khong co nguoi");
         } else {

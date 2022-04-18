@@ -3,54 +3,54 @@ package lopnguoi;
 import java.util.ArrayList;
 
 public class HoGiaDinh {
-    private String diachi;
-    private int songuoi;
-    private ArrayList<LopNguoi> GiaDinh;
+    private String diaChi;
+    private int soNguoi;
+    private ArrayList<LopNguoi> giaDinh;
 
     public HoGiaDinh(String diachi, int songuoi) {
-        this.diachi = diachi;
-        this.songuoi = songuoi;
-        this.GiaDinh = new ArrayList<>();
+        this.diaChi = diachi;
+        this.soNguoi = songuoi;
+        this.giaDinh = new ArrayList<>();
     }
 
-    public String getDiachi() {
-        return diachi;
+    public String getDiaChi() {
+        return diaChi;
     }
 
-    public void setDiachi(String diachi) {
-        this.diachi = diachi;
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
-    public int getSonguoi() {
-        return songuoi;
+    public int getSoNguoi() {
+        return soNguoi;
     }
 
-    public void setSonguoi(int songuoi) {
-        this.songuoi = songuoi;
+    public void setSoNguoi(int soNguoi) {
+        this.soNguoi = soNguoi;
     }
 
     public ArrayList<LopNguoi> getGiaDinh() {
-        return GiaDinh;
+        return giaDinh;
     }
 
     public void setGiaDinh(ArrayList<LopNguoi> giaDinh) {
-        GiaDinh = giaDinh;
+        this.giaDinh = giaDinh;
     }
 
     public void add(LopNguoi lopNguoi) {
-        GiaDinh.add(lopNguoi);
+        giaDinh.add(lopNguoi);
     }
 
     public void display() {
-        for (int i = 0; i < GiaDinh.size(); i++) {
-            System.out.println(GiaDinh.get(i).toString());
+        for (int i = 0; i < giaDinh.size(); i++) {
+            System.out.println(giaDinh.get(i).toString());
         }
-        System.out.println(" dia chi "+diachi +", so nguoi "+songuoi);
+        System.out.println(" dia chi "+ diaChi +", so nguoi "+ soNguoi);
     }
 
     public int findByName(String ten) {
-        for (int i = 0; i < GiaDinh.size(); i++) {
-            if (GiaDinh.get(i).getTen().equals(ten)) {
+        for (int i = 0; i < giaDinh.size(); i++) {
+            if (giaDinh.get(i).getTen().equals(ten)) {
                 return i;
             }
         }
@@ -62,7 +62,7 @@ public class HoGiaDinh {
         if(indexOfLopnguoi == -1) {
             System.out.println("không có");
         }else {
-            GiaDinh.set(indexOfLopnguoi,lopNguoi);
+            giaDinh.set(indexOfLopnguoi,lopNguoi);
         }
     }
     public void delete(String name) {
@@ -70,12 +70,12 @@ public class HoGiaDinh {
         if(indexOfLopnguoi == -1) {
             System.out.println("không có");
         }else {
-            GiaDinh.remove(indexOfLopnguoi);
+            giaDinh.remove(indexOfLopnguoi);
         }
     }
-    public int timkiem(String ten) {
-        for (int i = 0; i < GiaDinh.size() ; i++) {
-            if (GiaDinh.get(i).getTen().equals(ten)){
+    public int timKiem(String ten) {
+        for (int i = 0; i < giaDinh.size() ; i++) {
+            if (giaDinh.get(i).getTen().equals(ten)){
                 return i;
             }
 
@@ -90,8 +90,8 @@ public class HoGiaDinh {
     @Override
     public String toString() {
         return "HoGiaDinh{" +
-                "dia chi = " + diachi +
-                ", lop Nguoi = " + GiaDinh +
+                "dia chi = " + diaChi +
+                ", lop Nguoi = " + giaDinh +
                 '}';
     }
 }

@@ -3,17 +3,17 @@ package lopnguoi;
 import java.util.ArrayList;
 
 public class KhuPho  {
-    ArrayList<HoGiaDinh> KhuPholist;
+    ArrayList<HoGiaDinh> khuPholist;
 
     public KhuPho() {
-        this.KhuPholist = new ArrayList<>();
+        this.khuPholist = new ArrayList<>();
     }
     public void add(HoGiaDinh hoGiaDinh) {
-        KhuPholist.add(hoGiaDinh);
+        khuPholist.add(hoGiaDinh);
     }
     public void display(HoGiaDinh hoGiaDinh) {
-        for (int i = 0; i < KhuPholist.size() ; i++) {
-            System.out.println(KhuPholist.get(i));
+        for (int i = 0; i < khuPholist.size() ; i++) {
+            System.out.println(khuPholist.get(i));
 
         }
     }
@@ -23,20 +23,20 @@ public class KhuPho  {
         if (indexOfHoGiaDinh == -1) {
             System.out.println("không có");
         }else {
-            KhuPholist.set(indexOfHoGiaDinh,hoGiaDinh);
+            khuPholist.set(indexOfHoGiaDinh,hoGiaDinh);
         }
 
     }
     public void delete(String name) {
         int indexOfHoGiaDinh = -1;
-        for(int i = 0; i< KhuPholist.size();i++){
-             indexOfHoGiaDinh = KhuPholist.get(i).findByName(name);
+        for(int i = 0; i< khuPholist.size(); i++){
+             indexOfHoGiaDinh = khuPholist.get(i).findByName(name);
         }
 
         if (indexOfHoGiaDinh == -1) {
             System.out.println("không có");
         }else {
-            KhuPholist.remove(indexOfHoGiaDinh);
+            khuPholist.remove(indexOfHoGiaDinh);
         }
     }
 }
