@@ -1,12 +1,13 @@
 package lopnguoi;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class KhuPho  {
     ArrayList<HoGiaDinh> khuPholist;
 
     public KhuPho() {
-        this.khuPholist = new ArrayList<>();
+
     }
     public void add(HoGiaDinh hoGiaDinh) {
         khuPholist.add(hoGiaDinh);
@@ -38,6 +39,21 @@ public class KhuPho  {
         }else {
             khuPholist.remove(indexOfHoGiaDinh);
         }
+
+    }
+    public void hoGiaDinh() {
+        int max = khuPholist.get(0).getSoNguoi();
+        for (int i = 0; i < khuPholist.size() ; i++) {
+            if (max < khuPholist.get(i).getSoNguoi()){
+                max = khuPholist.get(i).getSoNguoi();
+            }
+
+        }
+        System.out.println("hộ gia đình nhiều thành viên nhất" + max);
+    }
+    public void agemin() {
+        ArrayList collections = null;
+        collections.sort((Comparator) khuPholist);
     }
 }
 
