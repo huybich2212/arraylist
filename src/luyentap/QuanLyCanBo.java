@@ -28,7 +28,8 @@ public class QuanLyCanBo implements QuanLy<CanBo> {
         }
         System.out.println("----------------------------------------");
     }
-    public void thoatCT() {
+    public int thoatCT() {
         System.exit(0);
+        return 0;
     }
 }

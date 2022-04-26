@@ -14,9 +14,9 @@ public class MainCb {
       System.out.println("Nhập tên cần tìm");
       String ten = scanner.nextLine();
       System.out.println(quanLyCanBo.timKiem(ten));
-      System.out.println("Thoát chương trình");
-
-      quanLyCanBo.thoatCT();
+      System.out.println("Nhấn 0 để thoát chương trình");
+      scanner.nextInt();
+      System.out.println(quanLyCanBo.thoatCT());
 
 
     }

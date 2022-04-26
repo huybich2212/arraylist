@@ -12,11 +12,10 @@ public class main {
             System.out.println("-----MENU------");
             System.out.println(    "chọn chức năng ");
             System.out.println(
-                    "1. Thêm người vào List .\n" +
+                            "1. Thêm người vào List .\n" +
                             " 2. In List người ra màn hình.\n" +
                             " 3. xoá người trong list.\n" +
                             " 4. Tìm kiếm người theo số cmnd.\n" +
-                            " 5. Xuất ra danh sách người có tuổi từ cao đến thấp.\n" +
                             " 0. Thoát chương trình."
             );
             choice = sc.nextInt();
@@ -40,8 +39,12 @@ public class main {
             }else if (choice == 2){
                 hoGiaDinh.display();
             }else if (choice == 3){
+                System.out.println("nhập tên cần xoá");  String hoTen = sc.nextLine();
+
+                hoGiaDinh.xoa(hoTen);
             }else if (choice == 4){
-            }else if (choice == 5){
+                System.out.println("nhập tên cần tìm");  String hoTen = sc.nextLine();
+                System.out.println(hoGiaDinh.timNguoi(hoTen));
             }
         }while (choice!=0);
 

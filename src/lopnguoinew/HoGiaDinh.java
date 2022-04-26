@@ -47,18 +47,27 @@ public class HoGiaDinh implements Comparable<HoGiaDinh> {
 
     }
 
-    public boolean xoa(Nguoi nguoi) {
-        return this.giaDinh.remove(nguoi);
-    }
-
-    public void timNguoi(String hoTen) {
-        for (Nguoi nguoi : giaDinh) {
-            if (nguoi.getHoTen().indexOf(hoTen) > 0) {
-                System.out.println(nguoi);
-            }
+    public void xoa(String hoTen) {
+        int indexOf=timNguoi(hoTen);
+        if(indexOf==-1){
+            System.out.println("ko có trong danh sách");
+        }
+        else {
+            this.giaDinh.remove(indexOf);
+            soThanhVien--;
         }
 
+     }
 
+
+    public int timNguoi(String hoTen) {
+        for (int i = 0; i < giaDinh.size(); i++) {
+            if(giaDinh.get(i).getHoTen().equals(hoTen)) {
+                return i;
+            }
+
+        }
+        return -1;
     }
 
     @Override

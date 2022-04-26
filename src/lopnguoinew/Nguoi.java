@@ -6,6 +6,7 @@ public class Nguoi {
     private String ngheNghiep;
     private int cmnd;
 
+
     public Nguoi(String hoTen, int tuoi, String ngheNghiep, int cmnd) {
         this.hoTen = hoTen;
         this.tuoi = tuoi;
